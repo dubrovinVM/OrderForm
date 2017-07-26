@@ -80,10 +80,156 @@ hr{
         margin-top:30px;
     }
 
+.form-controls {
+    margin-left:15px;
+    margin-bottom:15px;
+    margin-top:15px;
+    display: block;
+    width: auto;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.control-labels{
+    /*margin-top:10px;*/
+    color:black;
+    margin-right:20px;
+}
+
+.form_chng_rqst_info {
+    width:100%;
+    background-color: lightgray;
+    border:1px solid black;
+}
+.table_forms tr {
+    line-height:20px;
+}
+
+.table_forms tr td {
+    padding-left: 30px;
+    width:50%;
+}
+
+.tb_date {
+    width: 50%;
+    background-image: url(../img/calendar.jpg);
+    background-repeat: no-repeat;
+    background-position: right 5px top 3px;
+    background-size: 25px 25px;
+    padding-right:35px;
+}
+
+/*Grid*/
+
+.mydatagrid {
+    width: 100%;
+    border: solid 2px black;
+    min-width: 80%;   
+}
+
+.mydatagrid_header {
+    background-color: #646464;
+    font-family: Arial;
+    color: White;
+    border: none 0px transparent;
+    height: 25px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.mydatagrid_rows {
+    background-color: #fff;
+    font-family: Arial;
+    font-size: 14px;
+    color: #000;
+    min-height: 25px;
+    text-align: left;
+    border: none 0px transparent;
+}
+
+.mydatagrid_rows:hover {
+        background-color: #ff8000;
+        font-family: Arial;
+        color: #fff;
+        text-align: left;
+    }
+
+.mydatagrid_selectedrow {
+    background-color: #ff8000;
+    font-family: Arial;
+    color: #fff;
+    font-weight: bold;
+    text-align: left;
+}
+
+.mydatagrid a /** FOR THE PAGING ICONS  **/
+ {
+   background-color: Transparent;
+   padding: 5px 5px 5px 5px;
+   color: #fff;
+   text-decoration: none;
+   font-weight: bold;   
+}
+
+.mydatagrid a:hover /** FOR THE PAGING ICONS  HOVER STYLES**/
+{
+    background-color: #000;
+    color: #fff;
+}
+
+.mydatagrid span /** FOR THE PAGING ICONS CURRENT PAGE INDICATOR **/
+ {
+    background-color: #c9c9c9;
+    color: #000;
+    padding: 5px 5px 5px 5px;
+}
+
+.mydatagrid_pager {
+    background-color: #646464;
+    font-family: Arial;
+    color: White;
+    height: 30px;
+    text-align: left;
+}
+
+.mydatagrid td {
+    padding: 5px;
+}
+
+.mydatagrid th {
+    padding: 5px;
+
+}
 
 
 
+.mrg_left {
+    margin-left: 30px;
+}
 
+.color_yellow{
+    color:gold;
+}
+.color_darkyellow {
+    color: white;
+}
 
-
+.ckbx label {
+    min-height: 30px;
+    padding-left: 16px;
+    margin-top: 0px;
+    cursor: pointer;
+}
 

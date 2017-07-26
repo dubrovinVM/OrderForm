@@ -43,6 +43,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Ionic.Zip">
+      <HintPath>..\..\..\c# dll\DotNetZipLib-DevKit-v1.9\Tools\Ionic.Zip.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
@@ -65,11 +68,18 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Account\Login.aspx" />
     <Content Include="Bootstrap\css\bootstrap.css" />
     <Content Include="Bootstrap\css\font-awesome.min.css" />
     <Content Include="Bootstrap\js\bootstrap.min.js" />
     <Content Include="css\style.css" />
     <Content Include="Default.aspx" />
+    <Content Include="Error.aspx" />
+    <Content Include="Form.aspx" />
+    <Content Include="FormInfo.aspx" />
+    <Content Include="img\calendar.jpg" />
+    <Content Include="img\delete.png" />
+    <Content Include="js\jquery-1.7.2.min.js" />
     <Content Include="packages.config" />
     <Content Include="MasterPage.Master" />
     <Content Include="Bootstrap\fonts\glyphicons-halflings-regular.svg" />
@@ -77,7 +87,16 @@
     <Content Include="Bootstrap\fonts\fontawesome-webfont.ttf" />
     <Content Include="Bootstrap\fonts\FontAwesome.otf" />
     <Content Include="Bootstrap\fonts\fontawesome-webfont.svg" />
+    <Content Include="Bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="Properties\PublishProfiles\ab85bc5e-0ee0-4-231-b9ee - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\ab85bc5e-0ee0-4-231-b9ee - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile1.pubxml" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -86,9 +105,19 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Web.config" />
+    <Content Include="Print\PrintForm.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -96,6 +125,29 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Error.aspx.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Error.aspx.designer.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form.aspx.cs">
+      <DependentUpon>Form.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form.aspx.designer.cs">
+      <DependentUpon>Form.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FormInfo.aspx.cs">
+      <DependentUpon>FormInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormInfo.aspx.designer.cs">
+      <DependentUpon>FormInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\LykosDB.cs" />
+    <Compile Include="Handlers\User.cs" />
     <Compile Include="MasterPage.Master.cs">
       <DependentUpon>MasterPage.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -103,10 +155,23 @@
     <Compile Include="MasterPage.Master.designer.cs">
       <DependentUpon>MasterPage.Master</DependentUpon>
     </Compile>
+    <Compile Include="Print\PrintForm.aspx.cs">
+      <DependentUpon>PrintForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Print\PrintForm.aspx.designer.cs">
+      <DependentUpon>PrintForm.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="img\" />
+    <Folder Include="App_Code\" />
+    <Folder Include="myfiles\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -1,0 +1,69 @@
+-- ================================================
+-- Template generated from Template Explorer using:
+-- Create Procedure (New Menu).SQL
+--
+-- Use the Specify Values for Template Parameters 
+-- command (Ctrl-Shift-M) to fill in the parameter 
+-- values below.
+--
+-- This block of comments will not be included in
+-- the definition of the procedure.
+-- ================================================
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+-- =============================================
+-- Author:		<Author,,Name>
+-- Create date: <Create Date,,>
+-- Description:	<Description,,>
+-- =============================================
+CREATE PROCEDURE fillGridView_forms 
+	@operator_id NVARCHAR(30),
+	@operator_role NVARCHAR(30)
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+	IF (@operator_role LIKE 'manager')
+	     BEGIN
+	        SELECT  
+	        sts.category_name as [status], 
+	        frms.id as id, 
+	        usrs.fullName, 
+	        usrs.comment, 
+	        frms.[operator_id], 
+            frms.[name], 
+	        frms.[saved_date], 
+	        frms.[send_date], 
+	        frms.[signed_date] 
+	        		FROM [result].[forms] as frms
+                    LEFT OUTER JOIN dbo.users as usrs 
+                    on frms.[operator_id] = usrs.id
+                    LEFT OUTER JOIN dbo.[form_status] as sts 
+                    on frms.[status_id] = sts.id 
+	        		WHERE frms.operator_id LIKE @operator_id 
+	        		ORDER BY frms.[id] DESC
+        END
+	ELSE
+	    BEGIN
+		    SELECT  
+	            sts.category_name as [status], 
+	            frms.id as id, 
+	            usrs.fullName, 
+	            usrs.comment, 
+	            frms.[operator_id], 
+                frms.[name], 
+	            frms.[saved_date], 
+	            frms.[send_date], 
+	            frms.[signed_date] 
+	            		FROM [result].[forms] as frms
+                        LEFT OUTER JOIN dbo.users as usrs 
+                        on frms.[operator_id] = usrs.id
+                        LEFT OUTER JOIN dbo.[form_status] as sts 
+                        on frms.[status_id] = sts.id 	            		
+	            		ORDER BY frms.[id] DESC
+
+		END
+END
+GO

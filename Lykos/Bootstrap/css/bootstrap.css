@@ -2405,21 +2405,21 @@ input[type="time"],
 input[type="datetime-local"],
 input[type="month"] {
   line-height: 34px;
-  line-height: 1.42857143 \0;
+  line-height: 1.42857143 ;
 }
 input[type="date"].input-sm,
 input[type="time"].input-sm,
 input[type="datetime-local"].input-sm,
 input[type="month"].input-sm {
   line-height: 30px;
-  line-height: 1.5 \0;
+  line-height: 1.5;
 }
 input[type="date"].input-lg,
 input[type="time"].input-lg,
 input[type="datetime-local"].input-lg,
 input[type="month"].input-lg {
   line-height: 46px;
-  line-height: 1.33 \0;
+  line-height: 1.33;
 }
 _:-ms-fullscreen,
 :root input[type="date"],
@@ -2463,9 +2463,10 @@ _:-ms-fullscreen.input-lg,
 }
 .radio label,
 .checkbox label {
-  min-height: 20px;
+  /*vertical-align: middle;*/
+  min-height: 30px;
   padding-left: 20px;
-  margin-bottom: 0;
+  margin-top: 4px;
   font-weight: normal;
   cursor: pointer;
 }
@@ -2474,8 +2475,8 @@ _:-ms-fullscreen.input-lg,
 .checkbox input[type="checkbox"],
 .checkbox-inline input[type="checkbox"] {
   position: absolute;
-  margin-top: 4px \9;
-  margin-left: -20px;
+  margin-top: 8px;
+  margin-left: -8px;
 }
 .radio + .radio,
 .checkbox + .checkbox {
