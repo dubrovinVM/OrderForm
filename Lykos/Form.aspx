@@ -245,9 +245,9 @@
                     <asp:CheckBox ID="CheckBox_blister" CssClass="ckbx" Text="blister" runat="server" style="display: inline !important" /> 
                     <asp:FileUpload ID="FileUpload_blister" class="form-controls" runat="server" style="display: inline !important"/>
                     <br />
-                    <asp:CheckBox ID="CheckBox_caster" CssClass="ckbx" Text="caster" runat="server" style="display: inline !important" /> 
+                    <!--<asp:CheckBox ID="CheckBox_caster" CssClass="ckbx" Text="caster" runat="server" style="display: inline !important" /> 
                     <asp:FileUpload ID="FileUpload_caster" class="form-controls" runat="server" style="display: inline !important"/>
-                    <br />
+                    <br />    -->
                     <asp:CheckBox ID="CheckBox_tube" CssClass="ckbx" Text="tube" runat="server" style="display: inline !important" /> 
                     <asp:FileUpload ID="FileUpload_tube" class="form-controls" runat="server" style="display: inline !important"/>
                     <br />
